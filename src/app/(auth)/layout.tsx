@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function AuthLayout({
   children,
@@ -16,11 +17,15 @@ export default function AuthLayout({
             "radial-gradient(50% 40% at 50% 0%, color-mix(in oklch, var(--primary) 18%, transparent), transparent 70%)",
         }}
       />
-      <Link
-        href="/"
-        className="font-display mb-8 text-2xl font-semibold tracking-tight"
-      >
-        Zentry
+      <Link href="/" aria-label="Zentry" className="mb-8">
+        <Image
+          src="/logo.png"
+          alt="Zentry — Track. Plan. Grow."
+          width={160}
+          height={160}
+          priority
+          className="size-28 rounded-2xl shadow-lg"
+        />
       </Link>
       <div className="w-full max-w-sm">{children}</div>
     </div>

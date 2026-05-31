@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { ArrowRight, LineChart, PiggyBank, Wallet } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Logo } from "@/components/common/logo";
 
 const HIGHLIGHTS = [
   {
@@ -34,9 +35,7 @@ export default function LandingPage() {
       />
 
       <header className="mx-auto flex w-full max-w-6xl items-center justify-between px-6 py-6">
-        <span className="font-display text-xl font-semibold tracking-tight">
-          Zentry
-        </span>
+        <Logo size={36} />
         <div className="flex items-center gap-2">
           <Button render={<Link href="/login" />} variant="ghost">
             Log in

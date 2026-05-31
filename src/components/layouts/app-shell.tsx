@@ -15,6 +15,7 @@ import {
 import { SidebarNav } from "@/components/layouts/sidebar-nav";
 import { UserMenu } from "@/components/layouts/user-menu";
 import { ThemeToggle } from "@/components/common/theme-toggle";
+import { Logo } from "@/components/common/logo";
 
 interface AppShellProps {
   name: string;
@@ -25,11 +26,8 @@ interface AppShellProps {
 
 function Brand() {
   return (
-    <Link
-      href="/dashboard"
-      className="font-display text-lg font-semibold tracking-tight"
-    >
-      Zentry
+    <Link href="/dashboard" aria-label="Zentry">
+      <Logo />
     </Link>
   );
 }
