@@ -7,8 +7,8 @@ import { formatCurrency } from "@/utils/format";
 
 export function ExpensePieChart({ data }: { data: CategoryBreakdown[] }) {
   return (
-    <div className="h-64 w-full">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="w-full">
+      <ResponsiveContainer width="100%" height={256}>
         <PieChart>
           <Pie
             data={data}

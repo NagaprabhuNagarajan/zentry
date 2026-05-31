@@ -38,12 +38,12 @@ export function AppShell({ name, email, avatarUrl, children }: AppShellProps) {
 
   return (
     <div className="flex min-h-screen w-full">
-      {/* Desktop sidebar */}
-      <aside className="border-border bg-sidebar hidden w-60 shrink-0 flex-col border-r lg:flex print:!hidden">
+      {/* Desktop sidebar — pinned full-height, non-scrolling */}
+      <aside className="border-border bg-sidebar sticky top-0 hidden h-screen w-60 shrink-0 flex-col overflow-hidden border-r lg:flex print:!hidden">
         <div className="flex h-16 items-center px-6">
           <Brand />
         </div>
-        <div className="flex-1 overflow-y-auto px-3 py-2">
+        <div className="flex-1 px-3 py-2">
           <SidebarNav />
         </div>
       </aside>

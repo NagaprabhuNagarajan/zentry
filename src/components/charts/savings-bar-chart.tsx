@@ -16,8 +16,8 @@ import { formatCompactCurrency, formatCurrency } from "@/utils/format";
 
 export function SavingsBarChart({ data }: { data: SavingsTrendPoint[] }) {
   return (
-    <div className="h-72 w-full">
-      <ResponsiveContainer width="100%" height="100%">
+    <div className="w-full">
+      <ResponsiveContainer width="100%" height={288}>
         <BarChart data={data} barGap={4}>
           <CartesianGrid vertical={false} stroke="var(--border)" />
           <XAxis
